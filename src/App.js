@@ -55,6 +55,7 @@ function App() {
             center: [lng, lat],
             zoom: zoom,
           });
+
           // Navigation Control
           map.current.addControl(
             new mapboxgl.NavigationControl({ showCompass: true }),
@@ -90,7 +91,9 @@ function App() {
                   } ago`;
 
             let lastRefreshed = document.getElementById("last-refreshed");
-            lastRefreshed.innerHTML = measurementTime.toLocaleTimeString(); // Display the last refreshed time in legend
+
+            // Display the last refreshed time in legend
+            lastRefreshed.innerHTML = measurementTime.toLocaleTimeString();
 
             const popup = new mapboxgl.Popup().setHTML(
               `

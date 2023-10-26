@@ -13,7 +13,7 @@ This is a web app showing the air quality of different points in Nairobi using d
 
 - Clone the project.    
 ```bash 
-$ git@github.com:Jesse-Bett/airqo-nbo.git
+$ git@github.com:DerKip/airqo-nbo.git
 ```  
 
 - Install the dependancies.
