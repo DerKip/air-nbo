@@ -5,8 +5,7 @@ import axios from "axios";
 import Header from "./Header";
 import Legend from "./legend";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiaHVibG9zZWt1cm8iLCJhIjoiY2xsem0wdzNoMDAxYzNqczZ3eWkwdnlyNyJ9._f-vlL_y1Zc8wAlWDqL06Q";
+mapboxgl.accessToken = process.env.ACCESS_TOKEN;
 
 function App() {
   const mapContainer = useRef(null);
@@ -26,8 +25,8 @@ function App() {
       Purple: "#B836F5",
       Maroon: "Maroon",
     };
-    const DEVICE_ID = "641b3069572090002992a7a1";
-    const TOKEN = "8VYUFBK2T4ZHK623";
+    const DEVICE_ID = process.env.DEVICE_ID;
+    const TOKEN = process.env.TOKEN;
     axios
       .get(
         `https://api.airqo.net/api/v2/devices/measurements/airqlouds/${DEVICE_ID}?token=${TOKEN}`
